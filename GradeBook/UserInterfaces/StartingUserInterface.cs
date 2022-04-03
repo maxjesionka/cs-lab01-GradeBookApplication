@@ -33,10 +33,10 @@ namespace GradeBook.UserInterfaces
 
         public static void CreateCommand(string command)
         {
-            var parts = command.Split(' ');
-            if (parts.Length != 2)
+            var parts = command.Split(' '); 
+            if (parts.Length != 4) 
             {
-                Console.WriteLine("Command not valid, Create requires a name.");
+                Console.WriteLine("Command not valid, Create requires a name and type of gradebook.");
                 return;
             }
             var name = parts[1];
