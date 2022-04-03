@@ -13,6 +13,8 @@ namespace GradeBook.GradeBooks
     {
         public string Name { get; set; }
         public GradeBookType Type { get; set; }
+        public bool IsWeighted { get; set; }
+
         public List<Student> Students { get; set; }
 
         public BaseGradeBook(string name)
@@ -20,7 +22,13 @@ namespace GradeBook.GradeBooks
             Name = name;
             Students = new List<Student>();
         }
+        public BaseGradeBook(string name, bool isWeighted)
+        {
+            IsWeighted = isWeighted;
+            Name = name;
+            Students = new List<Student>();
 
+        }
         public void AddStudent(Student student)
         {
             if (string.IsNullOrEmpty(student.Name))
